@@ -1,0 +1,78 @@
+@import "constants";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-family: Sura, Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: $color-background-primary;
+}
+
+.container {
+  width: $desktop;
+  margin: 0 auto;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 96px;
+  background-color: lightgray;
+}
+
+.section-title {
+  margin: 0 auto 50px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  color: $color-text;
+  width: 482px;
+  padding: 7px 0;
+  border-bottom: 2px solid $color-secondary;
+
+  @media (max-width: $tablet) {
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+  }
+
+  @media (max-width: $mobile) {
+    width: 90%;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  color: $color-primary-dark;
+  margin-bottom: 28px;
+
+  @media (max-width: $tablet) {
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+  }
+
+  @media (max-width: $mobile) {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+}
+
+.description {
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  color: $color-text;
+
+  @media (max-width: $tablet) {
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+  }
+}

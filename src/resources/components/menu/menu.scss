@@ -1,0 +1,155 @@
+@import "../../../styles/constants";
+
+@keyframes content-appear {        
+    from {
+        left: -50%;
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }    
+    to {
+        left: 0;
+    }
+}
+
+@keyframes content-disappear {        
+    from {
+        left: 0;
+    }
+    70% {
+        opacity: 1;
+    } 
+    to {
+        left: -50%;
+        opacity: 0.5;
+    }
+}
+
+.react-menu {
+    &-button {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-rows: max-content max-content max-content;
+        width: 50px;
+        height: 50px;
+        gap: 3px;
+        border-radius: 50%;
+
+        &-uiitem {
+            width: 20px;
+            height: 2px;
+            background-color: $color-background-secondary;
+            align-self: center;
+        }
+    }
+
+    &-close-button {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        gap: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 23px;
+            left: 18px;
+            width: 16px;
+            height: 2px;
+            background-color: $color-background-secondary;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 23px;
+            left: 18px;
+            width: 16px;
+            height: 2px;
+            background-color: $color-background-secondary;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &-overlay {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &-content {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        animation: content-appear 0.7s;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 80%;
+        height: 100%;
+        background-color: $color-background-secondary;
+
+        &-item {
+            position: relative;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-link {
+                text-decoration: none;
+                font-size: $font-size-md;
+                line-height: $line-height-md;
+                color: $color-primary-dark;
+                text-transform: uppercase;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 2px;
+                background-color: $color-secondary;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 50px;
+            background-color: $color-primary;
+            margin-bottom: 15px;
+            padding-right: 5px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+    }
+}
+
+.content-close-animation {
+    animation: content-disappear 0.4s;
+}
+
+.hide-visibility {
+    visibility: hidden;
+}
