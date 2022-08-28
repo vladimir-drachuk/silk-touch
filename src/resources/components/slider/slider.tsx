@@ -11,7 +11,7 @@ import 'swiper/scss/pagination';
 import './slider.scss';
 
 const getPathToImg = (name: string, isMobile: boolean) => {
-    return `../../../assets/images/slider-photos/${isMobile ? 'mobile' : 'desktop'}/${name}`
+    return `assets/images/slider-photos/${isMobile ? 'mobile' : 'desktop'}/${name}`
 }
 
 export const Slider = (): JSX.Element => {
