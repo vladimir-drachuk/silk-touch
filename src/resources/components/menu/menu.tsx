@@ -21,6 +21,7 @@ export const Menu = (): JSX.Element => {
 
     const handleAnimationEnd = ({ animationName }: AnimationEvent) => {
         if (animationName === 'content-disappear') {
+            // this classlist addition need to avoid layot effect
             contentRef.current!.classList.add('hide-visibility');
             overlayRef.current!.classList.add('hide-visibility');
             setOpenState(false);
@@ -57,7 +58,9 @@ export const Menu = (): JSX.Element => {
                             ))}
                         </ul>
                         <footer>
-                            <div className="logo">logo container</div>
+                            <div className="react-menu-logo">
+                                <img src="./assets/images/logo.svg" alt="logo-header" />
+                            </div>
                         </footer>
                     </div>
                 </>
