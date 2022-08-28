@@ -187,6 +187,14 @@
 .services-section {
     margin-bottom: 92px;
 
+    .services-description {
+        margin-bottom: 32px;
+
+        @media (max-width: $desktop) {
+            padding: 0 20px;
+        }
+    }
+
     .services-content { 
         display: grid;
         grid-auto-flow: column;
@@ -220,7 +228,7 @@
             }
         }
 
-        &:nth-child(odd) {
+        &:nth-child(even) {
             .services-content-info {
                 order: 2;
 
@@ -315,6 +323,22 @@
 
         @media (max-width: $mobile) {
             grid-auto-flow: row;
+        }
+    }
+}
+
+.photo-section {
+    margin-bottom: 100px;
+
+    .photo {
+        &-slider-wrapper {
+            @media (max-width: $desktop) {
+                padding: 0 20px;
+            }
+    
+            @media (max-width: $mobile) {
+                padding: 0;
+            }
         }
     }
 }
@@ -466,6 +490,10 @@
                                  "networks networks";
             justify-content: space-around;
             gap: 20px;
+
+            .logo {
+                width: 20vw;
+            }
         }
     }
 }

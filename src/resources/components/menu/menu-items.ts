@@ -18,6 +18,10 @@ export const menuItems: IMenuItem[] = [{
     href: '#team',
 }, {
     id:'04',
+    label: 'Фото',
+    href: '#photo',
+}, {
+    id:'05',
     label: 'Контакты',
     href: '#contacts',
 }];
