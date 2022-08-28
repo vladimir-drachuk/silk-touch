@@ -4,13 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link type="image/png" sizes="30x24" rel="icon" href="./assets/images/favicon.jpg"> -->
-        <title>Title</title>
+        <link type="image/png" rel="icon" href="./assets/images/favicon.jpg">
+        <title>Silktouch</title>
     </head>
     <body>
         <header class="header">
             <div class="info-wrapper container">
-                <div class="logo">Logo<br/>Container</div>
+                <div class="logo">
+                    <img src="./assets/images/logo.svg" alt="logo-header">
+                </div>
                 <div class="info-content">
                     <div class="social-networks">
                         <a class="social-networks-link" href="http://vk.com">
@@ -78,6 +80,9 @@
                         <a class="menu-item-link" href="#team">Команда</a>
                     </li>
                     <li class="menu-item">
+                        <a class="menu-item-link" href="#photo">Фото</a>
+                    </li>
+                    <li class="menu-item">
                         <a class="menu-item-link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
@@ -92,6 +97,7 @@
             </section>
             <section id="services" class="services-section container">
                 <h2 class="section-title">Услуги</h2>
+                <p class="description services-description container ">Если вы хотите попасть к профессиональному косметологу и при этом получить адекватные цены, высококлассный сервис и полный спектр видов шугаринга – мы ждём вас в нашем салоне!</p>
                 <div class="services-content">
                     <div class="services-content-info">
                         <h3 class="title">Шугаринг</h3>
@@ -158,6 +164,10 @@
                     </div>
                 </div>
             </section>
+            <section id="photo" class="photo-section container">
+                <h2 class="section-title">Наш салон</h2>
+                <div id="js-slider" class="photo-slider-wrapper"></div>
+            </section>
             <section id="contacts" class="contacts-section container">
                 <h2 class="section-title">Контакты</h2>
                 <div id="map" class="contacts-map-wrapper"></div>
@@ -166,7 +176,9 @@
         </main>
         <footer class="footer">
             <div class="info-wrapper container">
-                <div class="logo">Logo<br/>Container</div>
+                <div class="logo">
+                    <img src="./assets/images/logo-white.svg" alt="logo-header">
+                </div>
                 <div class="contacts">
                     <div class="contacts-item">
                         <a href="tel:+375292222222" class="phone-link">

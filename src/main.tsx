@@ -1,15 +1,12 @@
 import { createRoot } from 'react-dom/client';
-import { Menu } from './resources/components';
+import { Menu, Slider } from './resources/components';
+import { renderReactDomItem } from './resources/utils/render-react-dom-item';
 import './styles';
 
 const menuContainer = document.querySelector('#js-mobile-menu-burger');
+const sliderContainer = document.querySelector('#js-slider');
 
-if (menuContainer) {
-    const root = createRoot(menuContainer);
-    root.render(<Menu />);
-} else {
-    throw new Error('Container for Menu not found');
-}
-
+renderReactDomItem(menuContainer, <Menu />, 'Container for Menu not found');
+renderReactDomItem(sliderContainer, <Slider />, 'Container for Slider not found');
 
 
